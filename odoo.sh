@@ -73,6 +73,7 @@ odoo () {
   if [ "$1" = "$PROJECT_NAME" ]; then
     shift
   fi
+  source "$PROJECT_VENV/bin/activate"
   "$PROJECT_VENV/bin/python" "$ODOO_BIN" -c "$ODOO_CONFIG" $@
 }
 
